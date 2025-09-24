@@ -41,7 +41,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/yourusername/-Campus-Course-Records-Manager-CCRM-
+git clone https://github.com/kaushtubh0134/CCRM
 cd CCRM
 Verify Java Installation:
 
