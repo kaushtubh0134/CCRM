@@ -1,328 +1,123 @@
-# Campus Course & Records Manager (CCRM)
-
-**Name:** Kaushtubh
-**Registration Number:** 24BCE11277 
-**Course:** Programming in Java  
-**Institution:** Vellore Institute of Technology (VIT)
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Evolution of Java](#evolution-of-java)
-- [Java Platform Comparison](#java-platform-comparison)
-- [Java Architecture](#java-architecture)
-- [Installation & Setup](#installation--setup)
-- [Project Structure](#project-structure)
-- [Features](#features)
-- [Technical Implementation](#technical-implementation)
-- [How to Run](#how-to-run)
-- [Syllabus Mapping](#syllabus-mapping)
-- [Sample Usage](#sample-usage)
-- [Acknowledgments](#acknowledgments)
-
-## Project Overview
-
-Campus Course & Records Manager (CCRM) is a comprehensive console-based Java SE application designed for educational institutions to efficiently manage:
-
-- **Student Management**: Create, update, enroll/unenroll students in courses
-- **Course Management**: Create, update, list, search, and assign instructors to courses
-- **Grades & Transcripts**: Record marks, compute GPA, and generate transcripts
-- **File Operations**: Import/export CSV data, backup and archive course data
-
-This project demonstrates advanced Java concepts including OOP principles, design patterns, exception handling, NIO.2 file operations, Stream API, and modern Java features.
-
-## Evolution of Java
-
-• **1995**: Java 1.0 - "Write Once, Run Anywhere" philosophy introduced
-• **1997**: Java 1.1 - Inner classes, JavaBeans, JDBC introduced
-• **1998**: Java 1.2 (J2SE) - Swing, Collections Framework, JIT compiler
-• **2000**: Java 1.3 - HotSpot JVM, JNDI included
-• **2002**: Java 1.4 - Assert keyword, regular expressions, NIO
-• **2004**: Java 5.0 - Generics, annotations, autoboxing, enhanced for-loop
-• **2006**: Java 6 - Script engine support, compiler API
-• **2011**: Java 7 - Diamond operator, try-with-resources, NIO.2
-• **2014**: Java 8 - Lambda expressions, Stream API, Optional class
-• **2017**: Java 9 - Module system (Jigsaw), JShell
-• **2018**: Java 10 - Local variable type inference (var keyword)
-• **2018**: Java 11 LTS - HTTP client, string methods
-• **2019**: Java 12-13 - Switch expressions, text blocks preview
-• **2020**: Java 14-15 - Pattern matching for instanceof, sealed classes preview
-• **2021**: Java 16-17 LTS - Records, sealed classes finalized
-• **2022-2024**: Java 18-21 LTS - Virtual threads, pattern matching enhancements
-
-## Java Platform Comparison
-
-| Feature | Java ME (Micro Edition) | Java SE (Standard Edition) | Java EE (Enterprise Edition) |
-|---------|------------------------|----------------------------|------------------------------|
-| **Target Platform** | Mobile devices, IoT, embedded systems | Desktop applications, standalone apps | Enterprise web applications, servers |
-| **Memory Footprint** | Very small (KB to few MB) | Moderate (MB to GB) | Large (GB+) |
-| **APIs Included** | Limited subset of Java APIs | Complete Java core APIs | Java SE + Enterprise APIs |
-| **Deployment** | Mobile apps, smart cards | Desktop JAR/EXE files | Web servers, application servers |
-| **Examples** | Android apps, smart TV apps | Eclipse IDE, NetBeans | Banking systems, e-commerce |
-| **Development Focus** | Resource-constrained environments | General-purpose applications | Multi-tier enterprise solutions |
-
-## Java Architecture
-
-### JDK (Java Development Kit)
-- **Complete development environment** for Java applications
-- **Includes**: JRE + development tools (javac, javadoc, jar, debugger)
-- **Used by**: Developers to compile, debug, and package Java applications
-- **Size**: Largest component (~100-300 MB)
-
-### JRE (Java Runtime Environment)
-- **Runtime environment** required to execute Java applications  
-- **Includes**: JVM + core libraries + supporting files
-- **Used by**: End users to run Java applications
-- **Size**: Medium component (~50-100 MB)
-
-### JVM (Java Virtual Machine)
-- **Abstract machine** that provides runtime environment for Java bytecode
-- **Responsibility**: Load, verify, and execute Java bytecode
-- **Platform-specific**: Different implementations for different operating systems
-- **Key features**: Garbage collection, memory management, security
-
-**Interaction Flow:**
-Java Source Code (.java) → javac compiler → Bytecode (.class) → JVM → Machine Code
+Campus Course & Records Manager (CCRM) 
+A comprehensive console-based Java application for managing student, course, and grade records in educational institutions. This project was developed as a submission for the "Programming in Java" course at Vellore Institute of Technology (VIT).
 
 
-## Installation & Setup
+Name: Kaushtubh
 
-### Windows Java Installation Steps
+Registration Number: 24BCE11277
 
-1. **Download JDK**
-   - Visit Oracle JDK download page or OpenJDK
-   - Download JDK 11 or higher for Windows x64
+## Key Features
+Student Management: Create, update, and manage student profiles.
 
-2. **Install JDK**
-   - Run the installer with administrator privileges
-   - Choose installation directory (e.g., `C:\Program Files\Java\jdk-11.0.x`)
-   - Complete installation wizard
+Course Management: Add, search, and list courses; assign instructors.
 
-3. **Set Environment Variables**
-JAVA_HOME = C:\Program Files\Java\jdk-11.0.x
-PATH = %PATH%;%JAVA_HOME%\bin
+Grades & Transcripts: Record grades, compute GPA, and generate official transcripts.
 
+Data Handling: Import/export student and course data via CSV files.
 
-4. **Verify Installation**
-java -version
-javac -version
-
-
-### Eclipse IDE Setup
-
-1. **Download Eclipse IDE for Java Developers**
-2. **Extract and launch Eclipse**
-3. **Create New Java Project**:
-- File → New → Java Project
-- Project name: `CCRM`
-- JRE version: Java 11+
-- Module settings: Don't create module-info.java
-
-4. **Configure Build Path**:
-- Right-click project → Properties → Java Build Path
-- Ensure correct JRE is selected
-
-## Features
-
-### Core Functionality
-- ✅ **Student Management**: CRUD operations with validation
-- ✅ **Course Management**: Advanced search and filtering using Stream API
-- ✅ **Enrollment System**: Business rule validation (credit limits, prerequisites)
-- ✅ **Grading System**: Automated GPA calculation with enum-based grades
-- ✅ **Transcript Generation**: Polymorphic reporting with formatted output
-- ✅ **File Operations**: CSV import/export with NIO.2 Path API
-- ✅ **Backup System**: Timestamped backups with recursive directory operations
-
-### Advanced Java Features Implemented
-- **Design Patterns**: Singleton (AppConfig), Builder (Course creation)
-- **Exception Handling**: Custom exceptions with comprehensive error handling
-- **Stream API**: Filtering, mapping, and aggregation operations
-- **Lambda Expressions**: Functional interfaces for comparisons and predicates  
-- **Date/Time API**: Modern temporal handling for all date operations
-- **NIO.2**: Path-based file operations with atomic moves and copies
-- **Generics**: Type-safe collections and service interfaces
-- **Nested Classes**: Static nested classes and inner classes
+Backup System: Create timestamped backups of all academic data.
 
 ## Technical Implementation
+This project demonstrates a deep understanding of core and advanced Java concepts, including:
 
-### OOP Principles Demonstrated
+Object-Oriented Programming (OOP): Applied principles of Encapsulation, Inheritance, Polymorphism, and Abstraction to create a modular and scalable codebase.
 
-#### Encapsulation
-private String studentId; // Private fields
+Design Patterns: Implemented Singleton for configuration management and the Builder pattern for object creation.
 
-public String getStudentId() { // Public getters
-    return studentId;
-}
+Modern Java Features: Leveraged Stream API, Lambda Expressions, NIO.2 (Path API) for efficient file operations, and the Date/Time API.
 
-public void setStudentId(String id) { // Validation in setters
-    if (id != null && !id.trim().isEmpty()) {
-        this.studentId = id;
-    }
-}
+Robust Error Handling: Utilized custom exceptions to manage business logic violations and improve application stability.
 
+For a detailed mapping of syllabus topics to code implementation, see the Syllabus Mapping section below.
 
+## Getting Started
+Prerequisites
+Java JDK 11 or higher
 
-#### Inheritance
-// Abstract base class
-public abstract class Person {
-    protected String id, name, email;
-    public abstract String getRole();
-}
+A Java IDE (e.g., Eclipse, IntelliJ IDEA)
 
-// Concrete implementations
-public class Student extends Person {
-    @Override
-    public String getRole() {
-        return "Student";
-    }
-}
+Installation & Setup
+Clone the repository:
 
+Bash
 
-#### Polymorphism
-// Interface-based polymorphism
-List<Persistable> services = Arrays.asList(
-        new StudentService(),
-        new CourseService()
-);
-services.forEach(service -> {
-    try {
-        service.save();
-    } catch (IOException e) {
-        handleException(e);
-    }
-});
-
-
-#### Abstraction
-// Service interfaces hide implementation complexity
-public interface Searchable<T> {
-    List<T> search(Predicate<T> criteria);
-
-    default List<T> findByName(String name) {
-        return search(item -> item.getName().contains(name));
-    }
-}
-
-
-## How to Run
-
-### Prerequisites
-- Java JDK 11 or higher
-- Eclipse IDE or any Java IDE
-- Windows/Linux/macOS
-
-### Compilation & Execution
-Clone the repository
-```bash
 git clone https://github.com/yourusername/-Campus-Course-Records-Manager-CCRM-
-```
 cd CCRM
+Verify Java Installation:
 
-Compile (if using command line)
+Bash
+
+java -version
+javac -version
+If not installed, follow the official Oracle JDK installation guide.
+
+How to Run
+There are two primary ways to run the application:
+
+1. From the Command Line
+Compile and run the main application class. The -ea flag is recommended to enable assertions for debugging purposes.
+
+Bash
+
+# Compile
 javac -cp src src/edu/ccrm/cli/CCRMApplication.java
 
-Run
-java -cp src edu.ccrm.cli.CCRMApplication
-
-Enable assertions (recommended)
+# Run
 java -ea -cp src edu.ccrm.cli.CCRMApplication
+2. Using an IDE (e.g., Eclipse)
+Open Eclipse and go to File -> Import -> Existing Projects into Workspace.
+
+Select the CCRM project folder.
+
+Right-click on CCRMApplication.java in the Project Explorer.
+
+Select Run As -> Java Application.
+
+## Project Documentation
+Java Platform & Architecture
+This section provides a brief overview of the Java ecosystem.
+
+Java Architecture
+Java code is compiled into bytecode (.class files) by the javac compiler. This bytecode is then executed by the Java Virtual Machine (JVM), which translates it into machine code for the specific operating system. This is the foundation of the "Write Once, Run Anywhere" philosophy.
+
+JVM (Java Virtual Machine): The abstract machine that executes the bytecode.
+
+JRE (Java Runtime Environment): Includes the JVM, core libraries, and other files required to run a Java application.
+
+JDK (Java Development Kit): The complete development kit for Java, including the JRE and all necessary development tools (e.g., javac, jar).
+
+Feature	Java SE (Standard Edition)
+Target Platform	Desktop applications, standalone apps
+APIs Included	Complete Java core APIs
+Deployment	Desktop JAR/EXE files
+
+Export to Sheets
+Syllabus Mapping
+Syllabus Topic	Implementation Location	Description
+OOP Principles	edu.ccrm.domain.*	Person hierarchy, encapsulation, polymorphism.
+Design Patterns	AppConfig.java, Course.Builder	Singleton, Builder.
+Exception Handling	edu.ccrm.domain.exceptions.*	Custom checked/unchecked exceptions.
+File I/O (NIO.2)	edu.ccrm.io.*	Path API, Files operations.
+Stream API	StudentService.getStatistics()	Filter, map, reduce operations.
+Lambda Expressions	Service search methods	Predicates, comparators.
+Date/Time API	Domain classes	LocalDate, DateTimeFormatter.
+
+Export to Sheets
+## License & Acknowledgments
+This project is for academic purposes. It was developed using resources from:
+
+Official Java Documentation
+
+"Gang of Four" Design Patterns reference
+
+Discussions on Java 8+ functional programming
+
+Project Completed: September 2025
+Academic Session: Semester 3, B.Tech Computer Science
 
 
-### Eclipse IDE
-1. Import project: File → Import → Existing Projects into Workspace
-2. Right-click `CCRMApplication.java` → Run As → Java Application
-3. Follow console menu prompts
 
 
 
 
-## Syllabus Mapping
 
-| **Syllabus Topic** | **Implementation Location** | **Description** |
-|-------------------|----------------------------|-----------------|
-| **OOP Principles** | `edu.ccrm.domain.*` | Person hierarchy, encapsulation |
-| **Design Patterns** | `AppConfig.java`, `Course.Builder` | Singleton, Builder patterns |
-| **Exception Handling** | `edu.ccrm.domain.exceptions.*` | Custom checked/unchecked exceptions |
-| **Collections & Generics** | `*Service.java` classes | Type-safe Maps, Lists, Streams |
-| **File I/O (NIO.2)** | `edu.ccrm.io.*` | Path API, Files operations |
-| **Stream API** | `StudentService.getStatistics()` | Filter, map, reduce operations |
-| **Lambda Expressions** | Service search methods | Predicates, comparators |
-| **Date/Time API** | Domain classes | LocalDate, DateTimeFormatter |
-| **Enums** | `Grade.java`, `Semester.java` | Enum constructors, methods |
-| **Nested Classes** | `StudentService.StudentStats` | Static nested class |
-| **Interfaces** | `Persistable.java`, `Searchable.java` | Interface inheritance, default methods |
-| **Recursion** | `RecursiveUtils.java` | Directory traversal, size calculation |
-| **Assertions** | Throughout domain classes | Invariant validation |
-
-## Sample Usage
-
-### Basic Operations
-=== CCRM Main Menu ===
-
-Manage Students
-Manage Courses
-Manage Enrollments
-Manage Grades
-Import/Export Data
-Reports
-Backup Data
-Exit
-
-
-Example: Adding a student
-
-Enter choice: 1
-Student ID: 24BCE11277 |
-Registration Number: 24BCE11277 |
-Full Name: Kaushtubh|
-Email: kaushtubh.24bce11277@vitbhopal.ac.in
-
-✅ Student added successfully!
-
-
-### Enabling Assertions
-Enable assertions for debugging
-java -ea -cp src edu.ccrm.cli.CCRMApplication
-
-Assertions validate business rules:
-assert studentId != null : "Student ID cannot be null";
-assert credits >= 1 && credits <= 6 : "Credits must be between 1-6";
-
-
-## Error Handling
-
-The application implements robust exception handling:
-
-### Errors vs Exceptions
-- **Errors**: System-level problems (OutOfMemoryError, StackOverflowError)
-- **Exceptions**: Recoverable conditions handled by application logic
-
-### Custom Exception Examples
-// Checked exceptions for business rule violations
-public class MaxCreditLimitExceededException extends Exception {
-    public MaxCreditLimitExceededException(String message) {
-        super(message);
-    }
-}
-
-// Unchecked exceptions for programming errors
-public class DuplicateEnrollmentException extends RuntimeException {
-    public DuplicateEnrollmentException(String message) {
-        super(message);
-    }
-}
-
-
-## Acknowledgments
-
-- **Java Documentation**: Oracle official Java tutorials and documentation
-- **Design Patterns**: Gang of Four Design Patterns reference
-- **Stream API**: Java 8 functional programming concepts
-- **NIO.2**: Modern Java I/O best practices
-
----
-
-**Project Completed**: September 2025  
-**Academic Session**: Semester 3, B.Tech Computer Science  
-**Institution**: Vellore Institute of Technology (VIT)
-
-*This project demonstrates comprehensive understanding of Java SE features, object-oriented programming principles, and software engineering best practices.*
