@@ -1,7 +1,7 @@
 # Campus Course & Records Manager (CCRM)
 
-**Name:** Rishi Raj  
-**Registration Number:** 24BCE10149  
+**Name:** Kaushtubh
+**Registration Number:** 24BCE11277 
 **Course:** Programming in Java  
 **Institution:** Vellore Institute of Technology (VIT)
 
@@ -15,7 +15,6 @@
 - [Features](#features)
 - [Technical Implementation](#technical-implementation)
 - [How to Run](#how-to-run)
-- [Screenshots](#screenshots)
 - [Syllabus Mapping](#syllabus-mapping)
 - [Sample Usage](#sample-usage)
 - [Acknowledgments](#acknowledgments)
@@ -233,18 +232,7 @@ java -ea -cp src edu.ccrm.cli.CCRMApplication
 2. Right-click `CCRMApplication.java` → Run As → Java Application
 3. Follow console menu prompts
 
-## Screenshots
 
-📸 **Screenshot Directory**: `/screenshots/`
-- `java-installation.png` - JDK installation verification
-<!-- <img width="1040" height="241" alt="image" src="https://github.com/user-attachments/assets/a701276e-810a-4a1c-885d-f85c3271a349" /> -->
-  
-- `Project Structure.png` - Project Structure
-<!-- <img width="486" height="607" alt="image" src="https://github.com/user-attachments/assets/4f76f24b-d83f-47d9-883c-b8e72afe2150" /> -->
-
-
-- `student-management.png` - Student operations demo
-<!-- <img width="745" height="865" alt="image" src="https://github.com/user-attachments/assets/8c3f4e8f-9dcb-401d-9a26-21ad1badbb3d" /> -->
 
 
 ## Syllabus Mapping
@@ -283,10 +271,10 @@ Exit
 Example: Adding a student
 
 Enter choice: 1
-Student ID: 24BCE10149 |
-Registration Number: 24BCE10149 |
-Full Name: Rishi Raj |
-Email: rishi.24bce10149@vitbhopal.ac.in
+Student ID: 24BCE11277 |
+Registration Number: 24BCE11277 |
+Full Name: Kaushtubh|
+Email: kaushtubh.24bce11277@vitbhopal.ac.in
 
 ✅ Student added successfully!
 
